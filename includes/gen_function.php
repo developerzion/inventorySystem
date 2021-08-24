@@ -118,21 +118,23 @@ function update_site_details($con, $array){
 }
 function change_password($con, $array, $id){
 
-	$password = cleanString($array[0]);
-	$confirm_pass = cleanString($array[1]);
+	echo "<div class='alert alert-success'><b>Unable to change password: This function has been disabled on production</b></div>"; 
 
-	$hash = sha1($password);
+	// $password = cleanString($array[0]);
+	// $confirm_pass = cleanString($array[1]);
 
-	if($password != $confirm_pass){
-		echo "<div class='alert alert-danger'><b>!!!Passwords do not match</b></div>";
-	}
-	elseif(strlen($password) < 7){
-		echo "<div class='alert alert-danger'><b>!!!Password Length must exceed 7 character</b></div>";
-	}
-	else{ //d033e22ae348aeb5660fc2140aec35850c4da997
-		mysqli_query($con, "UPDATE tbl_admin SET password='$hash' WHERE id='$id'");
-		echo "<div class='alert alert-success'><b>Password successfully changed</b></div>";
-	}
+	// $hash = sha1($password);
+
+	// if($password != $confirm_pass){
+	// 	echo "<div class='alert alert-danger'><b>!!!Passwords do not match</b></div>";
+	// }
+	// elseif(strlen($password) < 7){
+	// 	echo "<div class='alert alert-danger'><b>!!!Password Length must exceed 7 character</b></div>";
+	// }
+	// else{ //d033e22ae348aeb5660fc2140aec35850c4da997
+	// 	mysqli_query($con, "UPDATE tbl_admin SET password='$hash' WHERE id='$id'");
+	// 	echo "<div class='alert alert-success'><b>Password successfully changed</b></div>";
+	// }
 
 }
 function register_staff($con, $array){
