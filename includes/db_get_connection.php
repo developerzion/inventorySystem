@@ -18,7 +18,7 @@ class dbconnection
 	public $host = "us-cdbr-east-04.cleardb.com";
 	public $user = "bfa50b2b9123ea";
 	public $pass = "51ec6a98";
-	public $dbase = "inventory";
+	public $dbase = "heroku_2b3cb1ad6973dfc";
 
 
 	public $val;
